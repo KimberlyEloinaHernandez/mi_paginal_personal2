@@ -11,12 +11,14 @@ th{
         background-color:lightpink;
     }
     tr:nth-child(odd){
-        background-color:lightcoral
+        background-color:lightcoral;
     }
     tr:hover {
         background-color:blanchedalmond;
     }
 .titulo{
+    justify-content: center;
+    align-items: center;
     font-size: 60px;
     color:black;
     font-weight:900;
@@ -37,17 +39,49 @@ th{
 }
 
 body{
-    padding: 50px;
-    margin: 60px;
+    padding: 5%;
+    margin: 3%;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-image: url(./Imagenes/5.jpg);
     background-size:500px;
     display:flex;
-    flex-direction:column;
+    justify-content:column;
     align-items:center;
     background-color:thistle;
 
 }
 .img-1{
-    border: 5px solid rgb(255, 255, 255);
+    border: 50px solid rgb(255, 255, 255);
+}
+/*Media query para pantallas menores a 768px*/
+@media(width<=768px){
+    body{
+        background-color: rgb(0, 0, 0);
+    }
+
+    .Subtitulo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .titulo{
+        font-size: 2em;
+    }
+
+    .Subtitulo, #especial{
+        font-size: 1em;
+    }
+
+    li, p{
+        font-size: .8em;
+    }
+
+    th{
+        font-size: 1em;
+    }
+    
+    tr, td{
+        font-size: .75em;
+    }
 }
